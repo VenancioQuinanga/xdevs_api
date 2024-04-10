@@ -1,0 +1,21 @@
+{
+  "name": "xdevs_api",
+  "version": "1.0.0",
+  "description": "xdevs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "venâncio Quinanga",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.1"
+  }
+}
