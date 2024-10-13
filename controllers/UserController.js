@@ -1,5 +1,5 @@
-//teste
-//teste..
+
+const path = require('path');
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 
@@ -135,6 +135,16 @@ module.exports = class UserController {
       }
 
       res.status(200).json({ user })
+    }
+
+    static async getUserPhoto(req, res) {
+      try {
+        const photo = req.params.photo;
+        const photoPath = path.resolve(__dirname, '../public/img/users/', photo); // Caminho absoluto
+        res.sendFile(photoPath);
+      } catch (err) {
+        res.status(404).send('Foto não encontrada.');
+      }
     }
     
     static async getUserByToken(req, res){

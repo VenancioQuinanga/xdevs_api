@@ -11,10 +11,11 @@ router.post("/login", UserController.login);
 router.get("/checkuser", UserController.checkUser);
 router.get("/getuserbytoken/:token", UserController.getUserByToken);
 router.get("/:id", UserController.getUserById);
+router.get("/img/:photo", UserController.getUserPhoto);
 router.post("/editprofile/:id",
-    verifyToken,
-    imageUpload.single("image"),
-    UserController.editUser
-  );
+  verifyToken,
+  imageUpload.single("image"),
+  UserController.editUser
+);
   
 module.exports = router;
